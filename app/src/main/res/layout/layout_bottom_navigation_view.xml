@@ -1,9 +1,5 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true">
 
         <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
             android:layout_width="match_parent"
@@ -14,5 +10,4 @@
             app:itemIconTint="@drawable/bottom_nav_view_icon_color">
         </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
 
-    </RelativeLayout>
 </merge>

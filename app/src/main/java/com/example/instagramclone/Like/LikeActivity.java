@@ -1,4 +1,4 @@
-package com.example.instagramclone;
+package com.example.instagramclone.Like;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.instagramclone.R;
 import com.example.instagramclone.Utils.BottomNavViewExHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 

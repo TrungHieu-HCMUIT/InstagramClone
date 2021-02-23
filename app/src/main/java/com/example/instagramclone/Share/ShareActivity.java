@@ -1,20 +1,21 @@
-package com.example.instagramclone;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.instagramclone.Share;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.instagramclone.R;
 import com.example.instagramclone.Utils.BottomNavViewExHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
-public class HomeActivity extends AppCompatActivity {
+public class ShareActivity extends AppCompatActivity {
 
-    private Context mContext = HomeActivity.this;
-    private static final String TAG = HomeActivity.class.getSimpleName();
-    private int ACTIVITY_NUM = 0;
+    private Context mContext = ShareActivity.this;
+    private static final String TAG = ShareActivity.class.getSimpleName();
+    private int ACTIVITY_NUM = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,6 @@ public class HomeActivity extends AppCompatActivity {
 
     private void setupBottomNavigationViewEx () {
         BottomNavigationViewEx bottomNavigationViewEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavViewEx);
-
         //Create bottom navigation view
         BottomNavViewExHelper.setupBottomNavView(bottomNavigationViewEx);
 

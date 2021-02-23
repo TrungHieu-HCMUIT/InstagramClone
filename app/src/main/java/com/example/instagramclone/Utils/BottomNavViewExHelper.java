@@ -6,14 +6,13 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 
-import com.example.instagramclone.HomeActivity;
-import com.example.instagramclone.LikeActivity;
-import com.example.instagramclone.ProfileActivity;
+import com.example.instagramclone.Home.HomeActivity;
+import com.example.instagramclone.Like.LikeActivity;
+import com.example.instagramclone.Profile.ProfileActivity;
 import com.example.instagramclone.R;
-import com.example.instagramclone.SearchActivity;
-import com.example.instagramclone.ShareActivity;
+import com.example.instagramclone.Search.SearchActivity;
+import com.example.instagramclone.Share.ShareActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 public class BottomNavViewExHelper {

@@ -1,4 +1,4 @@
-package com.example.instagramclone;
+package com.example.instagramclone.Profile;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,14 +7,15 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.instagramclone.R;
 import com.example.instagramclone.Utils.BottomNavViewExHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
-public class ShareActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
-    private Context mContext = ShareActivity.this;
-    private static final String TAG = ShareActivity.class.getSimpleName();
-    private int ACTIVITY_NUM = 2;
+    private Context mContext = ProfileActivity.this;
+    private static final String TAG = ProfileActivity.class.getSimpleName();
+    private int ACTIVITY_NUM = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

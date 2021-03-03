@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">InstagramClone</string>
+
+    <string name="edit_profile">Edit profile</string>
+    <string name="sign_out">Sign out</string>
+
+    <string name="username">Username</string>
+    <string name="display_name">Display name</string>
+    <string name="description">Description</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone number</string>
 </resources>

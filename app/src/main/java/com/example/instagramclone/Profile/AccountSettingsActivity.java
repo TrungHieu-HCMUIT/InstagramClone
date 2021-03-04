@@ -2,6 +2,8 @@ package com.example.instagramclone.Profile;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,7 +17,9 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.instagramclone.R;
+import com.example.instagramclone.Utils.BottomNavViewExHelper;
 import com.example.instagramclone.Utils.SectionsStatePagerAdapter;
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 import java.util.ArrayList;
 
@@ -23,6 +27,8 @@ public class AccountSettingsActivity extends AppCompatActivity {
     private static final String TAG = AccountSettingsActivity.class.getSimpleName();
 
     private Context mContext;
+
+    private int ACTIVITY_NUM = 4;
 
     private SectionsStatePagerAdapter pagerAdapter;
     private ViewPager mViewPager;
@@ -41,6 +47,8 @@ public class AccountSettingsActivity extends AppCompatActivity {
         setupFragments();
 
         setupSettingsList();
+
+        setupBottomNavigationViewEx();
 
         //Set up the back arrow navigating back to ProfileActivity
         ImageView backArrow = (ImageView) findViewById(R.id.backArrow);
@@ -82,5 +90,20 @@ public class AccountSettingsActivity extends AppCompatActivity {
                 setupViewPager(position);
             }
         });
+    }
+
+    private void setupBottomNavigationViewEx () {
+        BottomNavigationViewEx bottomNavigationViewEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavViewEx);
+
+        //Create bottom navigation view
+        BottomNavViewExHelper.setupBottomNavView(bottomNavigationViewEx);
+
+        //Set up on navigation item selected
+        BottomNavViewExHelper.enableNavigation(mContext, bottomNavigationViewEx);
+
+        //Set the icon of selected item on menu highlight
+        Menu menu = bottomNavigationViewEx.getMenu();
+        MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
+        menuItem.setChecked(true);
     }
 }

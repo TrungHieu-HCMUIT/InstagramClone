@@ -20,9 +20,9 @@ public class LikeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_login);
 
-        setupBottomNavigationViewEx();
+        //setupBottomNavigationViewEx();
     }
 
     private void setupBottomNavigationViewEx () {

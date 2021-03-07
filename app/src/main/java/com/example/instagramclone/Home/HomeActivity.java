@@ -4,15 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.instagramclone.Login.LoginActivity;
 import com.example.instagramclone.R;
 import com.example.instagramclone.Utils.BottomNavViewExHelper;
 import com.example.instagramclone.Utils.SectionsPagerAdapter;
 import com.example.instagramclone.Utils.UniversalImageLoader;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -22,16 +27,35 @@ public class HomeActivity extends AppCompatActivity {
     private static final String TAG = HomeActivity.class.getSimpleName();
     private int ACTIVITY_NUM = 0;
 
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
 
         setupBottomNavigationViewEx();
 
         setupViewPager();
 
         initImageLoader();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null)
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            Log.d(TAG, "signed_in" + currentUser.getUid());
+        } else {
+            Intent intent = new Intent(mContext, LoginActivity.class);
+            startActivity(intent);
+            Log.d(TAG, "signed_out");
+        }
     }
 
     /**
@@ -76,4 +100,5 @@ public class HomeActivity extends AppCompatActivity {
         UniversalImageLoader universalImageLoader = new UniversalImageLoader(mContext);
         ImageLoader.getInstance().init(universalImageLoader.getConfig());
     }
+
 }

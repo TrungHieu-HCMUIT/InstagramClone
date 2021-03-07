@@ -2,13 +2,17 @@
     <string name="app_name">InstagramClone</string>
 
     <string name="login_username">Username or email address</string>
-    <string name="login_password">Password</string>
+    <string name="password">Password</string>
+    <string name="password_2">Enter password again</string>
     <string name="login_log_in">Log In</string>
     <string name="login_no_account">Don\'t have an account?</string>
+    <string name="login_already_have_account">Already have an account?</string>
     <string name="login_sign_up">Sign Up</string>
+    <string name="register">Create a new account</string>
+
 
     <string name="edit_profile">Edit profile</string>
-    <string name="sign_out">Sign out</string>
+    <string name="log_out">Log out</string>
 
     <string name="username">Username</string>
     <string name="display_name">Display name</string>
